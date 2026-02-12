@@ -282,3 +282,37 @@ async function resizeImage() {
     }
   });
 })();
+
+// Auto select width when image selected
+document.querySelector('input[type="file"]').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const img = new Image();
+    const url = URL.createObjectURL(file);
+
+    img.onload = function() {
+        const originalWidth = img.width;
+
+        let autoWidth;
+
+        if (originalWidth > 3000) {
+            autoWidth = 1280;
+        } 
+        else if (originalWidth > 2000) {
+            autoWidth = 1080;
+        } 
+        else if (originalWidth > 1000) {
+            autoWidth = 720;
+        } 
+        else {
+            autoWidth = originalWidth;
+        }
+
+        document.getElementById("maxWidth").value = autoWidth;
+
+        URL.revokeObjectURL(url);
+    };
+
+    img.src = url;
+});
