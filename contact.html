@@ -2,32 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact | Image Tools</title>
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://strangerns.github.io/image-tools-site/contact.html" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact - PhotoToolsMax</title>
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://phototoolsmax.github.io/phototoolmax/contact.html" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="topbar">
-    <div class="brand"><div class="logo">IT</div><div><div class="brandTitle">Image Tools</div><div class="brandSub">Contact</div></div></div>
-    <nav class="nav"><a href="./">Home</a><a href="./about.html">About</a><a class="active" href="./contact.html">Contact</a><a href="./privacy-policy.html">Privacy</a></nav>
+    <div class="container topbarInner">
+      <a class="brand" href="./"><div class="logo">PT</div><div class="brandText"><div class="brandTitle">PhotoToolsMax</div><div class="brandSub">Image Tools (No Upload)</div></div></a>
+      <nav class="nav">
+        <a class="navLink" href="./">Home</a>
+        <a class="navLink" href="./about.html">About</a>
+        <a class="navLink active" href="./contact.html">Contact</a>
+        <a class="navLink" href="./privacy-policy.html">Privacy</a>
+      </nav>
+      <button class="iconBtn" id="themeBtn" type="button">☾</button>
+    </div>
   </header>
 
-  <main class="wrap">
-    <section class="card">
+  <main class="container">
+    <section class="card mt">
       <h1>Contact</h1>
-      <p class="muted">For support/feedback, email:</p>
-      <p><b>your-email@example.com</b> (replace with your real email)</p>
-      <p class="muted">Tip: AdSense approval ke liye real contact info helpful hota hai.</p>
+      <p class="muted">Email: <b>yourmail@example.com</b> (replace with your email)</p>
+      <p class="muted">For support and business inquiries, email us.</p>
     </section>
   </main>
 
   <footer class="footer">
-    <div>© <span id="year"></span> Image Tools</div>
-    <div class="footerLinks"><a href="./">Home</a></div>
+    <div class="container footerInner">
+      <div>© <span id="year"></span> PhotoToolsMax</div>
+      <div class="footerLinks">
+        <a href="./privacy-policy.html">Privacy</a>
+        <a href="./about.html">About</a>
+      </div>
+    </div>
   </footer>
+
+  <script src="app.js"></script>
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
-
