@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Image Tools - Free Online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <h1>Image Tools</h1>
+  <p>Compress • Convert • Resize • Passport Photo</p>
+</header>
+
+<main class="wrap">
+
+<section class="card">
+  <h2>Compress Image</h2>
+  <input type="file" id="compressFile">
+  <button onclick="compressImage()">Compress & Download</button>
+</section>
+
+<section class="card">
+  <h2>Convert Image</h2>
+  <input type="file" id="convertFile">
+  <select id="format">
+    <option value="image/jpeg">JPG</option>
+    <option value="image/png">PNG</option>
+    <option value="image/webp">WEBP</option>
+  </select>
+  <button onclick="convertImage()">Convert & Download</button>
+</section>
+
+<section class="card">
+  <h2>Resize Image</h2>
+  <input type="file" id="resizeFile">
+  <input type="number" id="width" placeholder="Width">
+  <input type="number" id="height" placeholder="Height">
+  <button onclick="resizeImage()">Resize & Download</button>
+</section>
+
+</main>
+
+<script src="app.js"></script>
+
+</body>
+</html>
