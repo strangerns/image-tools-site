@@ -46,3 +46,38 @@
 
 </body>
 </html>
+
+<section class="card">
+  <h2>Compress Image to Target KB</h2>
+  <p class="muted">Max image size: <b>20MB</b> | Minimum target: <b>20KB</b></p>
+
+  <div class="row">
+    <label class="btn">
+      Choose Image
+      <input id="tkFile" type="file" accept="image/*" hidden>
+    </label>
+    <div id="tkInfo" class="muted">No file chosen</div>
+  </div>
+
+  <div class="row">
+    <input id="tkTargetKb" type="number" inputmode="numeric" placeholder="Target KB (e.g. 200)" />
+    <select id="tkFormat">
+      <option value="image/jpeg">JPG</option>
+      <option value="image/webp">WEBP</option>
+    </select>
+    <button id="tkStart" class="primary">Compress</button>
+  </div>
+
+  <div class="row">
+    <label class="muted">Max width (optional)</label>
+    <input id="tkMaxWidth" type="number" inputmode="numeric" placeholder="e.g. 1280" />
+  </div>
+
+  <div id="tkResult" class="result">Result: —</div>
+
+  <div class="row" style="margin-top:10px;">
+    <a id="tkDownload" class="btn" href="#" style="display:none;">Download</a>
+  </div>
+
+  <img id="tkPreview" alt="" style="max-width:100%; border-radius:12px; display:none; margin-top:10px;" />
+</section>
