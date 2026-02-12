@@ -2,34 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policy | Image Tools</title>
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://strangerns.github.io/image-tools-site/privacy-policy.html" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Privacy Policy - PhotoToolsMax</title>
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://phototoolsmax.github.io/phototoolmax/privacy-policy.html" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="topbar">
-    <div class="brand"><div class="logo">IT</div><div><div class="brandTitle">Image Tools</div><div class="brandSub">Privacy Policy</div></div></div>
-    <nav class="nav"><a href="./">Home</a><a href="./about.html">About</a><a href="./contact.html">Contact</a><a class="active" href="./privacy-policy.html">Privacy</a></nav>
+    <div class="container topbarInner">
+      <a class="brand" href="./"><div class="logo">PT</div><div class="brandText"><div class="brandTitle">PhotoToolsMax</div><div class="brandSub">Image Tools (No Upload)</div></div></a>
+      <nav class="nav">
+        <a class="navLink" href="./">Home</a>
+        <a class="navLink" href="./about.html">About</a>
+        <a class="navLink" href="./contact.html">Contact</a>
+        <a class="navLink active" href="./privacy-policy.html">Privacy</a>
+      </nav>
+      <button class="iconBtn" id="themeBtn" type="button">☾</button>
+    </div>
   </header>
 
-  <main class="wrap">
-    <section class="card">
+  <main class="container">
+    <section class="card mt">
       <h1>Privacy Policy</h1>
-      <p class="muted">This website processes images locally in your browser. We do not upload your images to any server.</p>
-      <h2>Information we collect</h2>
-      <p>We do not collect personal images. Basic analytics/ads (if enabled) may use cookies as per Google policies.</p>
-      <h2>Contact</h2>
-      <p>For any questions, use the Contact page.</p>
+      <p class="muted">
+        PhotoToolsMax does not upload your images. Image processing happens locally in your browser.
+      </p>
+      <p class="muted">
+        We may use analytics/ads (like Google AdSense) in the future. Any third-party services may set cookies.
+      </p>
+      <p class="muted">
+        If you have questions, contact us via the Contact page.
+      </p>
     </section>
   </main>
 
   <footer class="footer">
-    <div>© <span id="year"></span> Image Tools</div>
-    <div class="footerLinks"><a href="./">Home</a></div>
+    <div class="container footerInner">
+      <div>© <span id="year"></span> PhotoToolsMax</div>
+      <div class="footerLinks">
+        <a href="./contact.html">Contact</a>
+        <a href="./about.html">About</a>
+      </div>
+    </div>
   </footer>
+
+  <script src="app.js"></script>
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
-
