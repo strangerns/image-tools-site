@@ -1,123 +1,89 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head><meta name="google-site-verification" content="nCST5rhOeHFS49ShAr0HQaLM2f1FrzQLeKGMxkVpDgc" />
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MB to KB Image Converter Online Free (Max 20MB) | Image Tools</title>
-  <title>Image Tools - Free Online</title>
-  <meta name="description" content="Free MB to KB image converter online. Compress image to target KB size (min 20KB) with max 20MB support. Fast, free and secure image compression tool." />
-<meta name="robots" content="index,follow" />
-  <link rel="stylesheet" href="style.css" />
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Tool - Convert Image MB to KB</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f4f6fb;
+}
+
+.header {
+    background: #4c5bd4;
+    color: white;
+    padding: 15px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.container {
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.drop-area {
+    border: 2px dashed #4c5bd4;
+    padding: 30px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+button {
+    background: #4c5bd4;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    width: 100px;
+}
+</style>
 </head>
 
 <body>
-  <header class="top">
-    <h1>Image Tools</h1>
-    <p>Compress • Convert • Resize • Target KB (Max 20MB)</p>
-  </header>
 
-  <main class="wrap">
+<div class="header">
+IMAGE TOOL
+</div>
 
-    <!-- 1) NORMAL COMPRESS -->
-    <section class="card">
-      <h2>Compress Image</h2>
-      <p class="muted">Max image size: <b>20MB</b></p>
+<div class="container">
+<div class="card">
 
-      <div class="row">
-        <input type="file" id="compressFile" accept="image/*" />
-      </div>
+<h2>Convert Image From MB To KB</h2>
 
-      <div class="row">
-        <label class="muted">Quality (1–95)</label>
-        <input type="number" id="compressQuality" value="75" min="1" max="95" />
-        <select id="compressFormat">
-          <option value="image/jpeg">JPG</option>
-          <option value="image/webp">WEBP</option>
-        </select>
-        <button class="primary" onclick="compressImage()">Compress & Download</button>
-      </div>
+<div class="drop-area">
+<input type="file" id="fileInput">
+<br><br>
+<button onclick="compress()">Select Images</button>
+</div>
 
-      <div id="compressStatus" class="result">Result: —</div>
-    </section>
+Size:
+<input type="number" id="targetKB" value="100"> KB
 
-    <!-- 2) CONVERT -->
-    <section class="card">
-      <h2>Convert Image</h2>
-      <p class="muted">Max image size: <b>20MB</b></p>
+<br><br>
 
-      <div class="row">
-        <input type="file" id="convertFile" accept="image/*" />
-        <select id="format">
-          <option value="image/jpeg">JPG</option>
-          <option value="image/png">PNG</option>
-          <option value="image/webp">WEBP</option>
-        </select>
-        <button class="primary" onclick="convertImage()">Convert & Download</button>
-      </div>
-      <div id="convertStatus" class="result">Result: —</div>
-    </section>
+<button onclick="compress()">Reduce Size</button>
 
-    <!-- 3) RESIZE -->
-    <section class="card">
-      <h2>Resize Image</h2>
-      <p class="muted">Max image size: <b>20MB</b></p>
+<p id="result"></p>
 
-      <div class="row">
-        <input type="file" id="resizeFile" accept="image/*" />
-      </div>
-      <div class="row">
-        <input type="number" id="width" placeholder="Width (px)" inputmode="numeric" />
-        <input type="number" id="height" placeholder="Height (px)" inputmode="numeric" />
-        <select id="resizeFormat">
-          <option value="image/jpeg">JPG</option>
-          <option value="image/png">PNG</option>
-          <option value="image/webp">WEBP</option>
-        </select>
-        <button class="primary" onclick="resizeImage()">Resize & Download</button>
-      </div>
-      <div id="resizeStatus" class="result">Result: —</div>
-    </section>
+</div>
+</div>
 
-    <!-- 4) COMPRESS TO TARGET KB -->
-    <section class="card">
-      <h2>Compress Image to Target KB</h2>
-      <p class="muted">Max image size: <b>20MB</b> | Minimum target: <b>20KB</b></p>
+<script src="app.js"></script>
 
-      <div class="row">
-        <input id="tkFile" type="file" accept="image/*" />
-        <div id="tkInfo" class="muted">No file chosen</div>
-      </div>
-
-      <div class="row">
-        <input id="tkTargetKb" type="number" inputmode="numeric" placeholder="Target KB (e.g. 200)" />
-        <select id="tkFormat">
-          <option value="image/jpeg">JPG</option>
-          <option value="image/webp">WEBP</option>
-        </select>
-        <input id="tkMaxWidth" type="number" inputmode="numeric" placeholder="Max width optional (e.g. 1280)" />
-        <button id="tkStart" class="primary">Compress</button>
-      </div>
-
-      <div id="tkResult" class="result">Result: —</div>
-
-      <div class="row">
-        <a id="tkDownload" class="btn" href="#" style="display:none;">Download</a>
-      </div>
-
-      <img id="tkPreview" alt="" class="preview" style="display:none;" />
-    </section>
-
-  </main>
-
-  <footer class="foot muted">
-    Works in your browser (no upload). Max 20MB per image.
-  </footer>
-
-  <script src="app.js"></script>
 </body>
 </html>
-
-
-
-
-
