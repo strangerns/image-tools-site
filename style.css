@@ -1,39 +1,25 @@
-body{
-background:#0b1020;
-color:white;
-font-family:Arial;
-margin:0;
-}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; background: #fff; color: #111; }
 
-.top{
-background:#111a33;
-padding:20px;
-text-align:center;
-}
+.top { padding: 18px 14px; border-bottom: 1px solid #eee; }
+.top h1 { margin: 0 0 6px 0; font-size: 34px; }
+.top p { margin: 0; opacity: .75; }
 
-.wrap{
-padding:20px;
-}
+.wrap { max-width: 900px; margin: 0 auto; padding: 14px; }
 
-.card{
-background:#121b38;
-padding:15px;
-margin-bottom:15px;
-border-radius:10px;
-}
+.card { padding: 16px; border: 1px solid #ddd; border-radius: 14px; margin: 14px 0; background: #fff; }
+.card h2 { margin: 0 0 10px 0; font-size: 28px; }
 
-button{
-background:#4c7dff;
-color:white;
-padding:10px;
-border:none;
-margin-top:10px;
-width:100%;
-border-radius:5px;
-}
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin: 10px 0; }
 
-input, select{
-width:100%;
-padding:10px;
-margin-top:10px;
-}
+input, select { padding: 10px 12px; border: 1px solid #ccc; border-radius: 10px; font-size: 15px; }
+button { padding: 10px 14px; border: 1px solid #ccc; border-radius: 10px; cursor: pointer; background: #f6f6f6; }
+
+.primary { border: 0; background: #1fe0d4; }
+.btn { padding: 10px 14px; border: 1px solid #ccc; border-radius: 10px; cursor: pointer; display: inline-block; text-decoration: none; color: inherit; background: #f6f6f6; }
+
+.muted { opacity: .75; font-size: 14px; }
+.result { padding: 10px; border: 1px dashed #bbb; border-radius: 10px; margin-top: 10px; }
+.preview { max-width: 100%; border-radius: 12px; margin-top: 10px; }
+
+.foot { padding: 18px 14px; border-top: 1px solid #eee; text-align: center; }
